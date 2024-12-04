@@ -1,0 +1,196 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+body{
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+}
+
+
+
+
+
+footer{
+background: black;	
+text-align: center;
+padding-top: 30px;
+padding-bottom: 30px;
+background: black;
+font-size: 18px;
+color: white;
+font-family: Algerian;
+}
+
+form {
+ width: 300px;
+ margin: auto;
+ padding: 10px;
+ border: 1px solid #ccc;
+ border-radius: 5px;
+ background-color: #fff000;
+border-radius: 20px;
+box-shadow: 0px 0px 10px black;
+}
+label {
+ display: block;
+ margin-bottom: 5px;
+ font-family: Algerian;
+}
+input, textarea {
+ width: 100%;
+ margin-bottom: 10px;
+ border-radius: 4px;
+ border: 1px solid #ccc;
+height: 30px;
+ border-radius: 20px;
+}
+button {
+ background-color: #4CAF50;
+ color: white;
+ padding: 5px;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+}
+
+
+
+form{
+    animation-name: animacion-para-derecha;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+
+@keyframes animacion-para-derecha {
+  10%   {background-color:green;}
+  25%  {background-color:sky blue;}
+  30%   {background-color:orange;}
+  40%  {background-color:curple;}
+}
+
+
+
+
+
+body header{ /*encabezado donde se encuenta el menÃº de navegacion*/
+
+  margin: 0px; /*Margen cero*/
+  padding: 0px; /*relleno cero*/
+  width: 100%;
+  height: 60px; /*alto de encabezado 60px*/
+  background-color: rgba(237, 184, 103, 1.0);
+  background: green; /*Color de fondo del encabezado*/
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.7); /*Sombra del encabezado*/
+}
+
+#boton-menu{ /*id de input o checkbox*/
+  display: none; /*Oculta el boton checkbox (casilla)*/
+}
+
+header label{ /*Label donde estarÃ¡ la imagen del menÃº desplegable*/
+  display: none; /*Oculta la imagen del menÃº desplegable en pantallas grandes*/
+  width: 100%; /*Ancho del menÃº desplegable*/
+  height: 60px; /*Alto del menÃº desplegable*/
+  
+}
+
+header label:hover{ /*Lo que pasarÃ¡ al pasar el cursor o mouse sobre la imagen del menÃº desplegable*/
+  cursor: pointer; /*El cursor cambia a forma de mano apuntando*/
+  background: rgba(0, 0, 0, 0.4); /*Color de fondo al pasar el cursor o mouse sobre el menÃº desplegable*/
+}
+
+.menu{ /*Crea una lista desordenada*/
+  padding-top: 7px; /*padding del menÃº en pantalla grande*/
+}
+
+
+.menu ul{ /*Crea una lista desordenada*/
+  margin: 0px; /*Margen cero*/
+  list-style: none; /*Estilo de lista, oculta los puntos o viÃ±etas*/
+  padding: 0; /*Borde inferior la lista*/
+  display: flex; /*Coloca la lista en una sola fila horizontal*/
+  justify-content: flex-end; /*Alinea la lista o contenido hacia de derecha*/
+}
+
+.menu li{ /*Lista del menÃº desplegable*/
+  text-transform: uppercase; /*Transforma el texto a mayÃºscula*/
+}
+
+.menu li:hover{ /*Lo que pasarÃ¡ al pasar el cursor sobre el menÃº desplegable*/
+  background: rgba(0, 0, 0, 0.3); /*Color de fondo alfa el 0.3 de opacidad*/
+}
+
+.menu li a{ /*Los enlaces de la lista desplegable*/
+  display: block; /*Cada elemento de la lista ocupa el 100% del ancho de su elemento padre*/
+  padding: 14px 14px; /*Borde inferior la los enlaces de la lista desplegable*/
+  color: white; /*Color de los enlaces de la lista desplegable*/
+  text-decoration: none; /*Quita lo subrayado de los enlaces de la lista desplegable*/
+}
+
+
+
+
+
+
+
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx INICIO PANTALLA TABLET O CELULAR*/
+
+@media(max-width: 952px){ /*Lo que pasarÃ¡ al estar en una pantalla inferior a 952 pixeles*/
+  header label{ /*Imagen dentro de label ubicado en el encabezado*/
+    display: block; /*Hace que la imagen o logo apareza al estar en pantalla menor a 952px*/
+    width: 100%; /*Ancho del menÃº desplegable*/
+  }
+
+
+
+  .logo-grande{
+    display: none /*Logo de negocio se olculta al estar en pantallas pequeÃ±as menor a 952px*/  
+  }
+
+  .menu{ /*Etiqueta nav con clase menu ------ MenÃº de navegacion*/
+    position: absolute; /*PosiciÃ³n absoluta o fija de la lista desplegable*/
+    background: green; /*Color de fondo de la etiqueta nav menu*/
+    width: auto; /*Ancho automÃ¡tico de la lista desplegable*/
+    margin-left: -110%; /*Esconde la lista al margen superior en un 110% a la izquierda mar el margen de 10px del header*/
+    transition: all 0.5s; /*Transicion del menÃº en medio segundo de duraciÃ³n*/
+  }
+
+  .menu ul{
+    flex-direction: column; /*La lista del menu se pone encolumna al estar en patalla inferior a 952px*/
+  }
+
+  .menu li{
+    border-top: 1px solid #fff; /*borde superior de color blanco a la lista desplegable o enlaces en columna*/
+    text-align: center; /*Texto centrado en la lista desplegable*/
+    text-transform: uppercase; /*Transforma a mayuscula el texto*/
+  }
+
+  #boton-menu:checked ~ .menu{ /*Lo que pasarÃ¡ al hacer check en la casilla del checkbox*/
+    padding-top: 0px; /*sin espacio de padding superior*/
+    margin-top: 2px; /*margen 2px porque sombra del la lista desplegable es 2px*/
+    margin-bottom: 0px; /*margen inferior*/
+    margin-left: 0px; /*margen izquierdo*/
+    margin-right: 0px; /*margen derecha*/
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.8); /*Sombra del la lista desplegable etiqueta nav*/
+    width: calc(100% - 20px); /*Ancho de la lista desplegable mesnos el margen de 10px a la izquierda y 10 a la derecha*/
+  }
+}
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx FIN PANTALLA TABLET O CELULAR*/
+
+
+
+section{
+  padding: 20px;
+}
+
+
+aside{
+  padding: 20px;
+
+}
